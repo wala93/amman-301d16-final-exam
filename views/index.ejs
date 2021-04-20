@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1> hello simpsons</h1> 
+<% simpsons.forEach(element=>{ %>
+
+<h2> <%= element.character %></h2>
+<p> <%= element.quote %></p>
+<img src="<%= element.image %>">
+
+
+
+<form action="/" method="post">
+    <input type="hidden" name="character" value="<%= element.character %>" > 
+    <input type="hidden" name="quote" value="<%= element.quote %>" > 
+    <input type="hidden" name="" value="<%= element.image %>" > 
+    <input type="hidden" name="characterDirection" value="<%=characterDirection%>" > 
+ 
+<button type="submit">favor character</button>
+</form>
+    <% })  %>
+
+
+</body>
+</html>
